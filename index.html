@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2><b>Từ điển 2020</b></h2>
+Nhập từ cần tra : <input type="text" id="tx">
+<input type="button" id="convert" value="Convert" onclick="convert()"><br>
+Result : <label id = result></label>
+    <script>
+        let arr1 = ['apple', 'banana', 'orange', 'lemon', 'plum',  'melon', 'mango', 'grape', 'avocado'];
+        let arr2 = ['Qua tao', 'Qua chuoi', 'Qua cam', 'Qua chanh', 'Qua man', 'Qua dua hau', 'Qua xoai', 'Qua nho', 'Qua bo'];
+        function convert() {
+            let v = document.getElementById('tx').value;
+            let index = -1;
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] === v) {
+                    index = i;
+                }
+            }
+            if (index === -1) {
+                document.getElementById('result').innerHTML = "Khong co du lieu"
+            } else
+                document.getElementById('result').innerHTML = arr2[index]
+        }
+
+    </script>
+</body>
+</html>
